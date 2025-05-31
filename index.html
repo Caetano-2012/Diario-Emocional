@@ -18,8 +18,21 @@
         <label for="usuario">Seu nome:</label>
         <input type="text" id="usuario" placeholder="Digite seu nome ou apelido" required>
         <label for="data">Data e hora:</label>
-        <input type="text">
+        <input type="datetime-local" id="data" required>
+        <label for="titulo">Título da entrada:</label>
+        <input type="text" id="titulo" placeholder="Dê um título para sua entrada" required>
+        <label for="texto">Como você está se sentindo hoje?</label>
+        <textarea id="texto" placeholder="Descreva seus sentimentos aqui" required></textarea>
+        <button type="button" onclick="salvarEntrada()">Salvar no diário</button>
     </form>
+    <div class="historico">
+        <h2>📝Histórico de entrada</h2>
+        <div id="listaEntradas"></div>
+    </div>
+    <div style="text-align:center;margin-top: 20px;">
+        <button onclick="mostrarFase()">Quero uma frase motivacional!🗣️</button>
+        <p id="fraseMotivacional" style="margin-top: 15px;font-style: italic;font-size: 1.1em;"></p>
+    </div>
     <!--JavaScript-->
     <script src="main.js"></script>
 </body>
